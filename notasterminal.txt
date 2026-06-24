@@ -1,0 +1,79 @@
+O Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Instale o PowerShell mais recente para obter novos recursos e aprimoramentos! https://aka.ms/PSWindows
+
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git init
+Initialized empty Git repository in C:/Users/lopes/OneDrive/Desktop/estudogit/.git/
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git add .
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   calculadora.py
+        new file:   repositorio1.txt
+
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git commit -m "feat: Criado repositorio para adicionar e atualizar meus estudos sobre git + guthub"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'lopes@LOPES.(none)')
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git config --global user.email "lopes.rgtm@gmail.com"
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git config --global user.name "Marcelo "
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git commit -m "feat: Criado repositorio para adicionar e atualizar meus estudos sobre git + guthub"
+[master (root-commit) 1ae6fe9] feat: Criado repositorio para adicionar e atualizar meus estudos sobre git + guthub
+ 2 files changed, 14 insertions(+)
+ create mode 100644 calculadora.py
+ create mode 100644 repositorio1.txt
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git branch -M main
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git remote add origin https://github.com/lopesrgtm-dot/lopesrgtm-dot
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git diff
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git push -u origin main
+info: please complete authentication in your browser...
+To https://github.com/lopesrgtm-dot/lopesrgtm-dot
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/lopesrgtm-dot/lopesrgtm-dot'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git pull origin main --allow-unrelated-histories
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.12 KiB | 67.00 KiB/s, done.
+From https://github.com/lopesrgtm-dot/lopesrgtm-dot
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+ create mode 100644 README.md
+PS C:\Users\lopes\OneDrive\Desktop\estudogit> git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 869 bytes | 869.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/lopesrgtm-dot/lopesrgtm-dot
+   8f5a5f3..b777574  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\lopes\OneDrive\Desktop\estudogit>
